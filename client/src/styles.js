@@ -15,4 +15,8 @@ export default makeStyles(() => ({
   image: {
     marginLeft: '15px',
   },
+  cardGroup: {
+    flexBasis: '50%',
+    flexGrow: '0'
+  }
 }));
