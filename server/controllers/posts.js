@@ -65,11 +65,22 @@ export const deletePost = async (req, res) => {
 }
 
 export const likePost = async (req, res) => {
+
     const { id } = req.params;
 
+    // req.userId  ... /// check if user has authentication to like a post 
+    if (!req.userId) return res.json({ message: 'Unathenticated'})
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
     
     const post = await PostMessage.findById(id);
+
+    const index = post.likes.findIndex((id) => id === String(req.userId))
+
+    if (index === -1) {
+        //like the post // no need to implement atm
+    } {
+        // delete the like of post // no need to implement atm 
+    }
 
     const updatedPost = await PostMessage.findByIdAndUpdate(id, { likeCount: post.likeCount + 1 }, { new: true });
     
