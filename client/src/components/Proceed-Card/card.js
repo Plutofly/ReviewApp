@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -12,7 +13,7 @@ const ProceedCard = ({instance = "Customer"}) => {
 
   let text = [];
   if (instance === "Customer") {
-      text = ['Lorem Ipsum Lorem Ipsum Lorem Ipsum', 'Lorem Ipsum Lorem Ipsum Lorem Ipsum', 'Continue as Customer'];
+      text = ['Know what\'s the best for you', 'Know what\'s the best for you', 'Continue as Customer'];
   } else if (instance === "Provider") {
       text = ['Grow your bussines with the help of our App', 'People on our app are looking to spent their money on the right company.', 
            'Continue as Provider'];
@@ -28,7 +29,7 @@ const ProceedCard = ({instance = "Customer"}) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.actions}>
-        <Button variant="contained" color="secondary">
+        <Button component={Link} to="/auth/signUp" variant="contained" color="secondary">
           {text[2]}
         </Button>      
       </CardActions>
