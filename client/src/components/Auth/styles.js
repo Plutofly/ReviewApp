@@ -27,4 +27,8 @@ export default makeStyles((theme) => ({
   googleButton: {
     marginBottom: theme.spacing(2),
   },
+  mainHeader: {
+      marginBottom: '10px',
+      fontWeight: '800',
+  }
 }));
