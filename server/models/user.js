@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 const userSchema = mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
-    password: { type: String, reuqired: true },
-    id: {type: String }
+    password: { type: String, required: true },
+    id: { type: String }
 })
 
 var PostMessage = mongoose.model('User', userSchema);

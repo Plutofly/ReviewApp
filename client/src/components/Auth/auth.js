@@ -4,14 +4,8 @@ import { Container, Avatar, Button, Paper, Grid, Typography } from '@material-ui
 import {useParams} from 'react-router'
 
 import Input from './input'
-import { useLocation } from 'react-router';
 const Auth = (props) => {
     const { authentication } = useParams()
-    console.log('Auth: ')
-    console.log(authentication)
-    // const location = useLocation()
-    console.log(props)
-    // const { isSignUp } = _ ? props.location.state.id
     const isSignUp = authentication === 'signUp'
     const classes = useStyles();
 

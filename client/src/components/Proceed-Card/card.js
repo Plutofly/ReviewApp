@@ -12,9 +12,9 @@ const ProceedCard = ({instance = "Customer"}) => {
   const classes = useStyles();
 
   let text = [];
-  if (instance === "Customer") {
+  if (instance === 'Customer') {
       text = ['Know what\'s the best for you', 'Know what\'s the best for you', 'Continue as Customer'];
-  } else if (instance === "Provider") {
+  } else if (instance === 'Provider') {
       text = ['Grow your bussines with the help of our App', 'People on our app are looking to spent their money on the right company.', 
            'Continue as Provider'];
   }
@@ -29,7 +29,7 @@ const ProceedCard = ({instance = "Customer"}) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.actions}>
-        <Button component={Link} to="/auth/signUp" variant="contained" color="secondary">
+        <Button component={Link} to={instance === 'Customer' ? '/auth/signUp' : '/'} variant="contained" color="secondary">
           {text[2]}
         </Button>      
       </CardActions>
