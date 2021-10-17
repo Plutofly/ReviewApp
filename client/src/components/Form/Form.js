@@ -33,10 +33,6 @@ const Form = ({ currentId, setCurrentId }) => {
     }
   };
 
-  const ShkrujeJon = async () => {
-    return 'Joni osht G-ja'
-  }
-
   return (
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
